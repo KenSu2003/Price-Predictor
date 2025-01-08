@@ -1,12 +1,14 @@
 1. Trains a stock model that predicts future price of a stock.
-'''
+
+```bash
 training.py
-'''
+```
 
 2. Predicts future price using the base model.
-'''
-prediction.py
-'''
+
+```bash
+python prediction.py
+```
 
 3. Test the accuracy of the prediction of the base model.
 ''' 

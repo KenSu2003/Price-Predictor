@@ -4,7 +4,7 @@ basic2    (AMD)       — sequence_length: 30 , epochs: 50 , batch_size: 64
 enhanced2 (AMD, AAPL) — sequence_length: 30 , epochs: 50 , batch_size: 64
 enhanced2_1 (AMD-AAPL, AMZN) — sequence_length: 30 , epochs: 50 , batch_size: 64
 enhanced2_2 (AMD-AAPL, MSFT) — sequence_length: 30 , epochs: 50 , batch_size: 64
-# enhanced2_1 and enhanced2_2 both have really loss
+# enhanced2_1 and enhanced2_2 both have really high loss
 ——————————————————————————————————————————————————————————————————————————
 basic3    (AMD)       — sequence_length: 30 , epochs: 50 , batch_size: 64
-enhanced2 (AMD, AAPL) — sequence_length: 30 , epochs: 50 , batch_size: 64
+enhanced3 (AMD, AAPL) — time_frame: 60, epochs: 25 , batch_size: 32

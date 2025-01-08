@@ -20,7 +20,7 @@ scaled_data = scaler.fit_transform(aapl_data['Close'].values.reshape(-1,1))
 x_train = []
 y_train = []
 
-time_frame = 30  # Assuming the same time frame used in training.py
+time_frame = 60  # Assuming the same time frame used in training.py
 
 for i in range(time_frame, len(scaled_data)):
     x_train.append(scaled_data[i-time_frame:i, 0])
@@ -30,10 +30,10 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 
 # Load your existing model
-model = load_model('prediction_AI.keras')
+model = load_model('base_AI.keras')
 
 # Train the model with AAPL data
 model.fit(x_train, y_train, epochs=25, batch_size=32)  # Adjust epochs and batch size as needed
 
 # Save the updated model
-model.save('updated_AI.keras')
+model.save('enhanced_AI.keras')

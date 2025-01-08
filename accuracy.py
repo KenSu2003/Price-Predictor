@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error
 
 # Load the pretrained model
-model = load_model('prediction_AI.keras')
+model = load_model('base_AI.keras')
 
 # Define the stock symbol and date range for testing data
 test_stock_symbol = 'AMD'

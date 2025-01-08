@@ -8,7 +8,7 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 
 # Load the pretrained model
-model = load_model('prediction_AI.keras')
+model = load_model('base_AI.keras')
 
 # Predict future closing prices
 future_days = 60  # Number of days into the future to predict

@@ -33,7 +33,6 @@ def create_sequences(data, sequence_length):
 
 # Define hyperparameters
 sequence_length = 30  # Number of days to look back in time for each prediction
-# sequence_length = 100  # Number of days to look back in time for each prediction
 epochs = 50
 batch_size = 64
 
@@ -58,7 +57,7 @@ if __name__ == "__main__":
     history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_data=(X_test, y_test), verbose=1)
 
     # Save the model
-    model.save('prediction_AI.keras')
+    model.save('base_AI.keras')
 
     # Visualize training loss
     plt.figure(figsize=(10, 6))

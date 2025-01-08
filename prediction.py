@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 model = load_model('prediction_AI.keras')
 
 # Predict future closing prices
-future_days = 30  # Number of days into the future to predict
+future_days = 60  # Number of days into the future to predict
 future_predictions = []
 last_sequence = closing_prices_scaled[-sequence_length:].reshape(1, sequence_length, 1)
 

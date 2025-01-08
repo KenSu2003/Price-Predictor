@@ -52,19 +52,20 @@ model.add(LSTM(50, activation='relu', input_shape=(sequence_length, 1)))
 model.add(Dense(1))
 model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
 
-# Train the model
-history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_data=(X_test, y_test), verbose=1)
+if __name__ == "__main__":
 
-# Save the model
-# model.save('prediction_ai_model.h5')
-model.save('prediction_AI.keras')
+    # Train the model
+    history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_data=(X_test, y_test), verbose=1)
 
-# Visualize training loss
-plt.figure(figsize=(10, 6))
-plt.plot(history.history['loss'], label='Training Loss')
-plt.plot(history.history['val_loss'], label='Validation Loss')
-plt.title('Training and Validation Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.legend()
-plt.show()
+    # Save the model
+    model.save('prediction_AI.keras')
+
+    # Visualize training loss
+    plt.figure(figsize=(10, 6))
+    plt.plot(history.history['loss'], label='Training Loss')
+    plt.plot(history.history['val_loss'], label='Validation Loss')
+    plt.title('Training and Validation Loss')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()

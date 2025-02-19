@@ -9,9 +9,9 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.optimizers.legacy import Adam as LegacyAdam  # Import the legacy optimizer
 
 # Define the stock symbol and date range for historical data
-stock_symbol = 'AMD'
+stock_symbol = 'USDT-BTC'
 start_date = '2010-01-01'
-end_date = '2022-12-31'
+end_date = '2024-02-18'
 
 # Download historical stock price data
 stock_data = yf.download(stock_symbol, start=start_date, end=end_date)
